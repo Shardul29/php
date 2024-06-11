@@ -1,0 +1,37 @@
+<form action="" method="post">
+    <input type="text" name="user" placeholder="Enter user Name"/>
+    <br/>
+    <br/>
+<button name="button" value="set">Set Sesion</button>
+<br/>
+<br/>
+<button name="button" value="get">Display Session</button>
+<br/>
+<br/>
+<button name="button" value="delete">Delete Session</button>
+</form>
+
+<?php
+
+//Start a sesion
+session_start();
+ //Create a session --
+
+ if(isset($_POST['button'])){
+    if($_POST['button']=="set"){
+        $val=$_POST['user'];
+        $_SESSION['user']=$val;
+        echo "Session is set ";
+    }
+//Display the session --
+    if($_POST['button']=="get"){
+            echo $_SESSION['user'];
+    }
+//Delete a session --
+    if($_POST['button']=="delete"){
+            session_destroy();
+            echo "Session Deleted";
+    }
+ }
+
+ ?>
