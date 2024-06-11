@@ -1,0 +1,17 @@
+<?php
+
+$data=["name"=>"Shardul","age"=>23,"email"=>"shar@gmail.com"];
+
+$jsonData = json_encode($data);
+
+print_r($jsonData);
+
+echo "<br>";
+
+$jsonData2 = '{"name":"Shardul","age":23,"email":"shar@gmail.com"}';
+
+$jsontoArray = json_decode($jsonData2,true);
+
+print_r($jsontoArray);
+
+?>
