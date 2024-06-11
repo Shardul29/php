@@ -1,0 +1,27 @@
+<?php
+
+setcookie("user","Shardul",time()+(86400));
+setcookie("Fruit","Apple",time()+(86400));
+setcookie("Color","Red",time()+(86400));
+
+
+if(isset($_COOKIE['user'])){
+    print_r($_COOKIE);
+}
+echo "<br>";
+
+if(isset($_COOKIE['Fruit'])){
+    echo "The cookie Fruit is having value ".$_COOKIE['Fruit'];
+}
+else{
+    echo "No friut found with such Fruit ";
+}
+echo "<br>";
+
+if(isset($_COOKIE['Color'])){
+    echo "The cookie color is having value ".$_COOKIE['Color'];
+}
+else{
+    echo "No cookie found with such color ";
+}
+?>
